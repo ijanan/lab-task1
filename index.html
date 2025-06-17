@@ -2,7 +2,7 @@
 
 <html lang="en">
 
-<head >
+<head>
 
   <meta charset="UTF-8">
 
@@ -11,6 +11,8 @@
   <title>User Information Form</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <link rel="stylesheet" href="style.css">
 
@@ -28,7 +30,11 @@
 
           <div class="card-header">
 
-            <h3 class="text-center">User Information</h3>
+            <h3 class="text-center">
+
+              <i class="fas fa-user-plus me-2"></i>User Information
+
+            </h3>
 
           </div>
 
@@ -36,37 +42,55 @@
 
             <form id="userForm">
 
-              <div class="mb-3">
-               
+              <div class="form-floating mb-3">
 
-                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
 
-                <input type="text" class="form-control" id="name" required> <i class='fab fa-facebook-messenger'></i>
+                <label for="name">
 
-              </div>
+                  <i class="fas fa-user me-2"></i>Full Name
 
-              <div class="mb-3">
-
-                <label for="email" class="form-label">Email</label>
-
-                <input type="email" class="form-control" id="email" required>
+                </label>
 
               </div>
 
-              <div class="mb-3">
+              <div class="form-floating mb-3">
 
-                <label for="id" class="form-label">ID</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
 
-                <input type="text" class="form-control" id="userId" required>
+                <label for="email">
+
+                  <i class="fas fa-envelope me-2"></i>Email Address
+
+                </label>
 
               </div>
 
-              <div class="text-center">
+              <div class="form-floating mb-4">
 
-                <button type="submit" class="btn btn-primary">Submit</button>
-                <br>
+                <input type="text" class="form-control" id="userId" placeholder="Enter your ID" required>
 
-                <a href="users.html" class="btn btn-secondary ms-2">View Users</a>
+                <label for="userId">
+
+                  <i class="fas fa-id-card me-2"></i>User ID
+
+                </label>
+
+              </div>
+
+              <div class="d-grid gap-2">
+
+                <button type="submit" class="btn btn-primary">
+
+                  <i class="fas fa-save me-2"></i>Submit
+
+                </button>
+
+                <a href="users.html" class="btn btn-secondary">
+
+                  <i class="fas fa-table me-2"></i>View Users
+
+                </a>
 
               </div>
 
@@ -87,8 +111,5 @@
   <script src="script.js"></script>
 
 </body>
-
-
-
 
 </html>
