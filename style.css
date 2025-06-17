@@ -4,13 +4,13 @@ body {
   
   }
   .card-header{
-    background: #5f708f;
+    background: #fcfcfc;
   }
   
   .card {
   
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    background: #a9d2ee;
+    background: #fefeff;
     transform: matrix();
   
   }
@@ -19,7 +19,7 @@ body {
   
   .card-header {
   
-    background-color: #f8f9fa;
+    background-color: rgb(13, 131, 131);
   
     border-bottom: 2px solid #dee2e6;
   
@@ -35,12 +35,16 @@ body {
   
   
   
+  h3.text-center {
+    color: whitesmoke;
+    font-size: 30px;
+}
   .btn {
   
     min-width: 400px;
     margin: 10px;
     padding: 15px;
-    background-color: teal;
+    background-color: rgb(13, 131, 131);
   
   }
   .btn:hover {
