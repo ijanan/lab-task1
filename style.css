@@ -3,10 +3,15 @@ body {
     background-color: #f8f9fa;
   
   }
+  .card-header{
+    background: #6495ED;
+  }
   
   .card {
   
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #6495ED;
+    transform: matrix();
   
   }
   
