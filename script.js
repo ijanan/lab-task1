@@ -1,162 +1,93 @@
 
+  
 
+  let users = JSON.parse(localStorage.getItem('users')) || [];
 
-let users = JSON.parse(localStorage.getItem('users')) || [];
 
 
+  
 
+  const userForm = document.getElementById('userForm');
 
-const userForm = document.getElementById('userForm');
+  if (userForm) {
 
-if (userForm) {
+    userForm.addEventListener('submit', function (e) {
 
-  userForm.addEventListener('submit', function (e) {
+      e.preventDefault();
 
-    e.preventDefault();
 
 
+      
 
+      // const name = document.getElementById('name').value;
 
+      const email = document.getElementById('email').value;
 
-    const name = document.getElementById('name').value;
+      const userId = document.getElementById('userId').value;
 
-    const email = document.getElementById('email').value;
 
-    const userId = document.getElementById('userId').value;
 
+      
 
+      const user = {
 
+        // name: name,
 
+        email: email,
 
-    const user = {
+        id: userId
 
-      name: name,
+      };
 
-      email: email,
 
-      id: userId
 
-    };
+      
 
+      users.push(user);
 
 
 
+      
 
-    users.push(user);
+      localStorage.setItem('users', JSON.stringify(users));
 
 
 
+      
 
+      userForm.reset();
 
-    localStorage.setItem('users', JSON.stringify(users));
 
 
 
 
+      window.location.href = 'users.html';
 
-    userForm.reset();
-=======
->>>>>>> 4386adbe797e0106485e3911704b8ef20302b232
+    });
 
+  }
 
 
 
+  
 
-const userForm = document.getElementById('userForm');
+  const userTableBody = document.getElementById('userTableBody');
 
-<<<<<<< HEAD
-  });
+  if (userTableBody) {
 
-}
-=======
-if (userForm) {
+    
 
-  userForm.addEventListener('submit', function (e) {
+    userTableBody.innerHTML = '';
 
-    e.preventDefault();
->>>>>>> 4386adbe797e0106485e3911704b8ef20302b232
 
 
+    
 
+    users.forEach(user => {
 
+      const row = document.createElement('tr');
 
-<<<<<<< HEAD
-const userTableBody = document.getElementById('userTableBody');
-
-if (userTableBody) {
-
-
-
-  userTableBody.innerHTML = '';
-
-
-
-
-=======
-    const name = document.getElementById('name').value;
-
-    const email = document.getElementById('email').value;
-
-    const userId = document.getElementById('userId').value;
-
-
-
-
-
-    const user = {
-
-      name: name,
-
-      email: email,
-
-      id: userId
-
-    };
-
-
-
-
-
-    users.push(user);
-
-
-
-
-
-    localStorage.setItem('users', JSON.stringify(users));
-
-
-
-
-
-    userForm.reset();
-
-
-
-
-
-    window.location.href = 'users.html';
-
-  });
-
-}
-
-
-
-const userTableBody = document.getElementById('userTableBody');
-
-if (userTableBody) {
-
-
-
-  userTableBody.innerHTML = '';
->>>>>>> 4386adbe797e0106485e3911704b8ef20302b232
-
-  users.forEach(user => {
-
-    const row = document.createElement('tr');
-
-    row.innerHTML = `
+      row.innerHTML = `
             
             <td>${user.name}</td>
             
@@ -166,8 +97,8 @@ if (userTableBody) {
             
             `;
 
-    userTableBody.appendChild(row);
+      userTableBody.appendChild(row);
 
-  });
+    });
 
-}
+  }
