@@ -40,9 +40,19 @@ body {
     min-width: 400px;
     margin: 10px;
     padding: 15px;
+    background-color: teal;
   
   }
- 
-  #new{
-    margin: 20px;
+  .btn:hover {
+    color: var(--bs-btn-hover-color);
+    background-color: #3b0d87;
+    border-color: var(--bs-btn-hover-border-color);
+}
+
+a.btn.btn-primary {
+    font-size: 20px;
+}
+  
+  .text-center .mt-3{
+    background-color: aquamarine;
   }
