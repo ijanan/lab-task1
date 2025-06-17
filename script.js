@@ -61,7 +61,6 @@
 
 
 
-      window.location.href = 'users.html';
 
     });
 
