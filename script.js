@@ -86,10 +86,11 @@
     users.forEach(user => {
 
       const row = document.createElement('tr');
+      // <td>${user.name}</td>
 
       row.innerHTML = `
             
-            <td>${user.name}</td>
+            
             
             <td>${user.email}</td>
             
